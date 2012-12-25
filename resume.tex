@@ -1,9 +1,9 @@
 \documentclass[10pt]{article}
 \pagestyle{empty}
-%\topmargin -.75in
-%\textwidth 6.5in
-%\textheight 10in
-%\oddsidemargin -0.25cm 
+\topmargin -.75in
+\textwidth 6.5in
+\textheight 10in
+\oddsidemargin -0.25cm 
 \makeatletter
 \def\@seccntformat#1{}
 \makeatother
@@ -41,8 +41,17 @@ Atlanta, GA 30305 \hfill (302) 754-1231\\
 
   \item Build Manager at Sharecare, Inc. - \hfill Oct 2011 - Aug 2012
   \begin{myitem}
-    \item Wrote a site crawler with daily email reports on resources - aggregated reports of status codes for 1.5million urls, images, files (Perl)
+    \item Wrote a custom site crawler with daily email reports on resources (Perl)
+    \begin{myitem}
+      \item Crawled 1.5 million pages nightly, checking all referenced resources
+      \item Aggregated email reports of status codes for urls, images, files
+      \item Data is persisted in a MySQL DB and additional reporting available - status codes of a page over time, average load time for a resource 
+    \end{myitem}
     \item Rewrite browser automation suite to use Selenium Webdriver 2.0 using Selenium::Remote::Driver
+    \begin{myitem}
+      \item Complete overhaul of the tool, refactored most methods and read all of them
+      \item 
+    \end{item}
     \item Responsible for interactions between related projects across new builds
   \end{myitem}
 
@@ -51,7 +60,6 @@ Atlanta, GA 30305 \hfill (302) 754-1231\\
     \item Development of in-house browser automation tool using Selenium RC 1.0
     \item Manual QA Testing of multiple websites/browsers
   \end{myitem}
-\end{myitem}
 
   \item Gempesaw, Daniel and Yogendra Joshi. ``A Review of Wavelet-Based Algorithms for\hfill Oct 2010\\ 
 Applications in Reduced Order Modeling of Thermal Management Systems.''
