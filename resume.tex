@@ -1,4 +1,5 @@
 \documentclass[10pt]{article}
+\usepackage{hyperref}
 \pagestyle{empty}
 \topmargin -.75in
 \textwidth 6.5in
@@ -8,6 +9,7 @@
 \def\@seccntformat#1{}
 \makeatother
 
+%% set up my own custom itemize
 \newenvironment{myitem}{
   \begin{itemize}
     \setlength{\itemsep}{1pt}
@@ -15,89 +17,106 @@
     \setlength{\parsep}{0pt}
 }{\end{itemize}}
 
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[3] {
+  \item \textbf{#1} #2 \hfill (#3)
+}
+
+% set the page title at the top
+\newcommand{\myauthor}[1] {
+  \begin{center}
+    \Large
+    \textbf{#1}
+  \end{center}
+  \hrule
+  \vspace{0.2 cm}
+  \normalsize}
+
+% set up the contact information
+\newcommand{\contact}[4] {
+  #1 \hfill \href{mailto:#3}{#3}\\
+  #2 \hfill #4\\
+\vspace{-.60 cm}
+}
 
 \begin{document}
-\begin{center}
-  \Large
-  \textbf{Daniel Joseph Gempesaw}
-\end{center}
-\hrule
-\vspace{0.2 cm}
-\normalsize
-360 Pharr Rd NE Apt. 606 \hfill gempesaw@gmail.com\\
-Atlanta, GA 30305 \hfill (302) 754-1231\\
-\vspace{-.60 cm}
+\myauthor{Daniel Joseph Gempesaw}
+\contact{360 Pharr Rd NE Apt. 606}
+        {Atlanta, GA 30305}
+        {gempesaw@gmail.com}
+        {(302) 754-1231}
 
-%% \vspace{-0.45 cm}
 \section{Experience}
-%% \vspace{-0.25cm}
 
-\begin{myitem}
-\item QA Architect at Sharecare, Inc. \hfill Aug 2012 - Present
+\begin{itemize}
+
+\headerrow {QA Architect}{Sharecare, Inc.}{Aug 2012 - Present}
   \begin{myitem}
-  \item Created test framework for in-house REST API testing (Perl)
+  \item Created test framework for in-house REST API testing (Perl, PHP)
   \item Created a customizable website-functionality monitoring suite (Perl, PHP)
+  \item Internal browser automation evangelist
   \end{myitem}
 
-\item Build Manager at Sharecare, Inc. \hfill Oct 2011 - Aug 2012
+\headerrow {Build Manager}{Sharecare, Inc.}{Oct 2011 - Aug 2012}
   \begin{myitem}
-  \item Wrote a custom site crawler with daily email reports on resources (Perl)
-    \begin{myitem}
-    \item Crawled 1.5 million pages nightly, checking all referenced resources
-    \item Aggregated email reports of status codes for urls, images, files
-    \item Data is persisted in a MySQL DB and additional reporting available - status codes of a page over time, average load time for a resource
-    \end{myitem}
-  \item Rewrite browser automation suite to use Selenium Webdriver 2.0 using Selenium::Remote::Driver
-    \begin{myitem}
-    \item Complete overhaul of the tool, refactored most methods and read all of them
-    \item
-    \end{myitem}
-  \item Responsible for interactions between related projects across new builds
+  \item Created a custom site crawler with daily email reports on resources for three websites (Perl)
+    %% \begin{myitem}
+    %% \item Crawled 1.5 million pages nightly, checking all referenced resources
+    %% \item Aggregated email reports of status codes for urls, images, files
+    %% \item Data is persisted in a MySQL DB and additional reporting available - status codes of a page over time, average load time for a resource
+    %% \end{myitem}
+  \item Rewrote browser automation suite to use Webdriver 2.0 using Selenium::Remote::Driver,
+    including minor contributions to Selenium::Remote::Driver (Perl)
+  \item Responsible for cross project interactions
+  \item Documentation: IE vm, regression documentation, critical path docs
   \end{myitem}
 
-\item QA Engineer I at Sharecare, Inc. \hfill Aug 2011 - Oct 2011
+\headerrow {QA Engineer I}{Sharecare, Inc.}{Aug 2011 - Oct 2011}
   \begin{myitem}
   \item Development of in-house browser automation tool using Selenium RC 1.0
-  \item Manual QA Testing of multiple websites/browsers
+  \item Manual QA Testing of multiple websites across supported browsers/OS
   \end{myitem}
 
-\item Gempesaw, Daniel and Yogendra Joshi. ``A Review of Wavelet-Based Algorithms for\hfill Oct 2010\\
-  Applications in Reduced Order Modeling of Thermal Management Systems.''
+\headerrow {Graduate Research Assistant}{Georgia Institute of Technology}{Sep 2008 - May 2011}
   \begin{myitem}
-  \item Refereed Conference Paper presented at NATO RTO-AVT-178 Specialists' Meeting on System Level Thermal Management for Enhanced Platform Efficiency: Bucharest, Romania.
+  \item Co-authored \& refereed a conference paper: ``A Review of Wavelet-Based Algorithms for
+    Applications in Reduced Order Modeling of Thermal Management Systems.''
+  \item Presented at the NATO RTO-AVT-178 Specialists' Meeting on System Level Thermal Management
+    for Enhanced Platform Efficiency: Bucharest, Romania.
+  \item Conducted research on advanced strategies for data center cooling simulations
   \end{myitem}
-\end{myitem}
-
-%% \vspace{-.55cm}
-\section{Skills}
-%% \vspace{-0.25cm}
-\begin{myitem}
-\item I write, read, and/or use the following frequently: Perl, PHP, elisp, bash, Emacs.
-\item On a less freqeunt basis, I write and read: \LaTeX, JavaScript, AJAX, HTML5, CSS, MySQL queries.
-\item Read only languages and those in which I haven't recently authored: C, C++, Java/JSP/JSTL, Matlab, Maple, Microsoft Office Suite.
-\item Typing Speed: 120 WPM
-\item Limited comprehension of Spanish and Mandarin
-\item Hobbies: Ultimate Frisbee, Bass guitar
-\end{myitem}
+\end{itemize}
 
 \section{Education}
-%% \vspace{-0.25cm}
-\begin{myitem}
-\item Georgia Institute of Technology, Atlanta, GA \hfill (2008 - 2011)
+%
+\begin{itemize}
+\headerrow {Georgia Institute of Technology}{Atlanta, GA}{2008 - 2011}
   \begin{myitem}
-  \item M. S. in Mechanical Engineering ``Advanced Simulation Strategies for Data Center Cooling''
+  \item M. S. in Mechanical Engineering
+  \item Thesis: ``A multi-resolution discontinuous Galerkin method for rapid simulation of thermal systems''
+    %% https://smartech.gatech.edu/bitstream/handle/1853/42775/gempesaw_daniel_j_201112_mast.pdf?sequence=1
   \end{myitem}
-\item University of Delaware, Newark, DE \hfill (2004 - 2008)
+\headerrow {University of Delaware}{Newark, DE}{2004 - 2008}
   \begin{myitem}
-  \item Honors Bachelor of Mechanical Engineering, B. S. in Mathematics, Minor in Phyiscs
-    %    \item Research with Dr. Kausik Sarkar: Drops in Shear Flow \hfill Spring 2007
-    %    \item Research with Dr. Russell Luke: The Phase Retrieval Problem\hfill Summer 2005
+  \item Honors Bachelor of Mechanical Engineering, Magna Cum Laude
+  \item Honors Bachelor of Science in Mathematics, Magna Cum Laude
+  \item Minor in Phyiscs
+%
+  %% \item Research with Dr. Kausik Sarkar: Drops in Shear Flow \hfill Spring 2007
+  %% \item item Research with Dr. Russell Luke: The Phase Retrieval Problem\hfill Summer 2005
+%
   \end{myitem}
-\end{myitem}
+\end{itemize}
+%
+\section{Skills}
+%
+\paragraph{Programming Languages:} Perl, elisp, PHP, bash, \LaTeX, Javascript (jQuery), HTML5+CSS3, MySQL
+\paragraph{Software:} emacs, git (magit), JIRA, Selenium Webdriver, \href{http://www.saucelabs.com}{Sauce Labs}, agile development \&
+  scrum, \href{http://www.github.com/gempesaw}{github}
+\paragraph{Typing Speed:} 120 WPM
+\paragraph{Languages:} Spanish, Mandarin, and Tagalog (limited comprehension)
+%% \item Hobbies: Ultimate Frisbee, Bass guitar, Computer Games
 %
 \vfill
 \hrule
-% \raggedleft
-\vspace{.2 cm}
-% Last updated on: December 24, 2012
 \end{document}
