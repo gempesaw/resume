@@ -1,0 +1,93 @@
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[3] {
+\item[] \textbf{#1} \hfill #3}
+%
+\newenvironment{position}{
+  \begin{itemize}[leftmargin=*]
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+}{\end{itemize}}
+
+\section{Experience}
+
+\subsubsection{Sharecare, Inc.}
+
+\begin{position}
+  \headerrow{QA Architect}{Sharecare, Inc.}{Aug 2012 - Present}
+  \headerrow{Build Manager}{Sharecare, Inc.}{Oct 2011 - Aug 2012}
+  \headerrow{QA Engineer I}{Sharecare, Inc.}{Aug 2011 - Oct 2011}
+  %
+  \paragraph{Honeydew}
+  An in-house analog to Cucumber, Honeydew was a full-featured browser
+  automation suite. It accepts feature files and executes
+  cross-browser tests with Selenium. The backend was written in Perl
+  and initially interfaced with browsers via Selenium RC. One of my
+  first tasks was to rewrite the whole application to use Selenium
+  Webdriver. I worked closely with Selenium::Remote::Driver, the Perl
+  bindings for the Selenium Webdriver project, and even contributed a
+  small fix to the CPAN module.
+
+  \paragraph{} Honeydew includes a PHP/JavaScript front end that enabled any
+  employee to write feature files in a DSL and test their
+  functionality across all browsers. With jQuery I added autosuggests,
+  instant feature searching, and per-user default settings to improve
+  the user interface.
+  \paragraph{Monitoring}
+  I extended Honeydew with monitoring functionality that ran critical
+  browser tests against our production websites to ensure 24/7
+  functionality. The suite included email reports on failures and a UI
+  for all members of the QA team to use, so everyone was able to
+  assert critical functionality in their respective projects.
+  \paragraph{Squash}
+  I created a site crawler written in entirely in Perl that checks
+  headers on URLs and all resources embedded within each page. Squash
+  scanned three production sites and over 1.5 million pages each
+  night, producing daily email reports with faulty static assets and
+  storing load time and historical information in a database.
+  \paragraph{REST API}
+  In order to test REST APIs, I wrote a test suite using
+  \href{https://github.com/SPORE}{SPORE} that would run validation
+  tests on the REST APIs that our developers were creating. I also
+  created a simple UI that enabled anyone to run the tests for each
+  build.
+  \paragraph{Manual QA Testing}
+\end{position}
+%%
+%% \begin{myitem}
+%% \item Created test framework for in-house REST API testing (Perl, PHP)
+%% \item Created a customizable website-functionality monitoring suite (Perl, PHP)
+%% \item Internal browser automation evangelist
+%% \end{myitem}
+%%
+%% \begin{myitem}
+%% \item Created a custom site crawler with daily email reports on resources for three websites (Perl)
+%%   \begin{myitem}
+%%   \item Crawled 1.5 million pages nightly, checking all referenced resources
+%%   \item Aggregated email reports of status codes for urls, images, files
+%%   \item Data is persisted in a MySQL DB and additional reporting available - status codes of a page over time, average load time for a resource
+%%   \end{myitem}
+%% \item Rewrote browser automation suite to use Webdriver 2.0 using Selenium::Remote::Driver,
+%%   including minor contributions to Selenium::Remote::Driver (Perl)
+%% \item Responsible for cross project interactions
+%% \item Documentation: IE vm, regression documentation, critical path docs
+%% \end{myitem}
+%%
+%% \begin{myitem}
+%% \item Development of in-house browser automation tool using Selenium RC 1.0
+%% \item Manual QA Testing of multiple websites across supported browsers/OS
+%% \end{myitem}
+
+%
+\subsubsection{Georgia Institute of Technology}
+%
+\begin{position}
+  \headerrow {Graduate Research Assistant}{Georgia Institute of Technology}{2008 - 2011}
+  \begin{myitem}
+  \item Co-authored \& refereed a conference paper: ``A Review of Wavelet-Based Algorithms for
+    Applications in Reduced Order Modeling of Thermal Management Systems.''
+  \item Presented at the NATO RTO-AVT-178 Specialists' Meeting on System Level Thermal Management
+    for Enhanced Platform Efficiency: Bucharest, Romania.
+  \item Conducted research on advanced strategies for data center cooling simulations
+  \end{myitem}
+\end{position}
