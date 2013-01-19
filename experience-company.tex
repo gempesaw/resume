@@ -18,40 +18,41 @@
   \headerrow{Build Manager}{Sharecare, Inc.}{Oct 2011 - Aug 2012}
   \headerrow{QA Engineer I}{Sharecare, Inc.}{Aug 2011 - Oct 2011}
   %
-  \paragraph{Honeydew}
-  An in-house analog to Cucumber, Honeydew was a full-featured browser
-  automation suite. It accepts feature files and executes
-  cross-browser tests with Selenium. The backend was written in Perl
-  and initially interfaced with browsers via Selenium RC. One of my
-  first tasks was to rewrite the whole application to use Selenium
-  Webdriver. I worked closely with Selenium::Remote::Driver, the Perl
-  bindings for the Selenium Webdriver project, and even contributed a
-  small fix to the CPAN module.
+  \begin{tabularx}{\linewidth}{r|X}
+    Honeydew & An in-house analog to Cucumber, Honeydew was a full-featured browser
+    automation suite. It accepts feature files and executes
+    cross-browser tests with Selenium. The backend was written in Perl
+    and initially interfaced with browsers via Selenium RC. One of my
+    first tasks was to rewrite the whole application to use Selenium
+    Webdriver. I worked closely with Selenium::Remote::Driver, the Perl
+    bindings for the Selenium Webdriver project, and even contributed a
+    small fix to the CPAN module.
 
-  \paragraph{} Honeydew includes a PHP/JavaScript front end that enabled any
-  employee to write feature files in a DSL and test their
-  functionality across all browsers. With jQuery I added autosuggests,
-  instant feature searching, and per-user default settings to improve
-  the user interface.
-  \paragraph{Monitoring}
-  I extended Honeydew with monitoring functionality that ran critical
-  browser tests against our production websites to ensure 24/7
-  functionality. The suite included email reports on failures and a UI
-  for all members of the QA team to use, so everyone was able to
-  assert critical functionality in their respective projects.
-  \paragraph{Squash}
-  I created a site crawler written in entirely in Perl that checks
-  headers on URLs and all resources embedded within each page. Squash
-  scanned three production sites and over 1.5 million pages each
-  night, producing daily email reports with faulty static assets and
-  storing load time and historical information in a database.
-  \paragraph{REST API}
-  In order to test REST APIs, I wrote a test suite using
-  \href{https://github.com/SPORE}{SPORE} that would run validation
-  tests on the REST APIs that our developers were creating. I also
-  created a simple UI that enabled anyone to run the tests for each
-  build.
-  \paragraph{Manual QA Testing}
+    Honeydew includes a PHP/JavaScript front end that enabled any
+    employee to write feature files in a DSL and test their
+    functionality across all browsers. With jQuery I added autosuggests,
+    instant feature searching, and per-user default settings to improve
+    the user interface.\\
+
+    Monitoring & I extended Honeydew with monitoring functionality that ran critical
+    browser tests against our production websites to ensure 24/7
+    functionality. The suite included email reports on failures and a UI
+    for all members of the QA team to use, so everyone was able to
+    assert critical functionality in their respective projects.\\
+
+    Squash & I created a site crawler written in entirely in Perl that checks
+    headers on URLs and all resources embedded within each page. Squash
+    scanned three production sites and over 1.5 million pages each
+    night, producing daily email reports with faulty static assets and
+    storing load time and historical information in a database. \\
+
+    REST API & In order to test REST APIs, I wrote a test suite using
+    \href{https://github.com/SPORE}{SPORE} that would run validation
+    tests on the REST APIs that our developers were creating. I also
+    created a simple UI that enabled anyone to run the tests for each
+    build. \\
+    Manual QA Testing & Extensive manual testing in a wide range of browser/OS combinations. \\
+  \end{tabularx}
 \end{position}
 %%
 %% \begin{myitem}
