@@ -17,41 +17,47 @@
   \headerrow{QA Architect}{Sharecare, Inc.}{Aug 2012 - Present}
   \headerrow{Build Manager}{Sharecare, Inc.}{Oct 2011 - Aug 2012}
   \headerrow{QA Engineer I}{Sharecare, Inc.}{Aug 2011 - Oct 2011}
-  %
-  \paragraph{Honeydew}
+
+  \paragraph{Honeydew} (Perl, PHP/jQuery/DHTMLX, Saucelabs, Selenium Webdriver)
   \begin{myitem}
-    \item Extensive development on a cross browser automation suite
-      \begin{myitem}
-      \item Initially based on Selenium RC, I rewrote the entire
-        project to use Selenium Webdriver,
-      \end{myitem}
-    \item Interprets DSL feature files and executes them locally or on
-      Saucelabs' entire browser suite, recording the video with
-      subtitles of each step execution
-    \item Also enhanced its PHP/Javascript (DHTMLX + jQuery) front
-      end, adding autosuggests, instant feature file searching,
-      per-user default settings, and general usability improvements
+  \item Grew this simple in-house Cucumber analog into a full fledged cross-browser automation suite
+  \item Rewrote the backend to update the project from Selenium RC to Selenium Webdriver
+  \item Interprets DSL feature files and executes them locally or on Saucelabs' entire browser suite, recording
+    the video with subtitles of each step execution
+  \item Enhanced front end with autosuggests, instant feature file searching, per-user default
+    settings, and general widespread usability improvements
   \end{myitem}
 
-  \paragraph{Monitoring}
-  I extended Honeydew with monitoring functionality that ran critical
-  browser tests against our production websites to ensure 24/7
-  functionality. The suite included email reports on failures and a UI
-  for all members of the QA team to use, so everyone was able to
-  assert critical functionality in their respective projects.
-  \paragraph{Squash}
-  I created a site crawler written in entirely in Perl that checks
-  headers on URLs and all resources embedded within each page. Squash
-  scanned three production sites and over 1.5 million pages each
-  night, producing daily email reports with faulty static assets and
-  storing load time and historical information in a database.
-  \paragraph{REST API}
-  In order to test REST APIs, I wrote a test suite using
-  \href{https://github.com/SPORE}{SPORE} that would run validation
-  tests on the REST APIs that our developers were creating. I also
-  created a simple UI that enabled anyone to run the tests for each
-  build.
-  \paragraph{Manual QA Testing}
+  \paragraph{Monitoring} (PHP, cron)
+  \begin{myitem}
+  \item Built a cross-browser functionality monitoring system based on Selenium Webdriver
+  \item Enabled other QA members to schedule Honeydew tests to be run against any browser matrix
+  \item Email alerting on critical functionality test failures and historical reporting
+  \end{myitem}
+  %% (setq tex-main-file "c:/daniel/resume/resume.tex")
+
+  \paragraph{Squash} (Perl, MySQL)
+  \begin{myitem}
+  \item Wrote a site crawler checks headers on URLs and all resources embedded within each page of an
+    input sitemap.xml
+  \item Tool was used to scan three production websites, over 1.5 million pages, each night
+  \item Produced daily email reports with error static assets and URLs
+  \item Stored all data in a DB for trend analysis (comparing builds, or the performance of a single
+    page over time)
+  \end{myitem}
+
+  \paragraph{REST API} (Perl, PHP/jQuery, MongoDB)
+  \begin{myitem}
+  \item Built a test suite with \href{https://github.com/SPORE}{SPORE} to test REST APIs created by our developers
+  \item Created an UI where anyone could run the tests for their project
+  \end{myitem}
+
+  \paragraph{Manual QA Testing} (JIRA, drop.lr, Jing, KeyCastr)
+  \begin{myitem}
+  \item Routinely performed manual browser tests in all major browsers
+  \item Tested stories and documented bugs in JIRA with extensive screenshot and video evidence
+  \item Frequently debugged complicated issues alongside front-end and back-end developers
+  \end{myitem}
 \end{position}
 %%
 %% \begin{myitem}
@@ -77,7 +83,7 @@
 %% \item Development of in-house browser automation tool using Selenium RC 1.0
 %% \item Manual QA Testing of multiple websites across supported browsers/OS
 %% \end{myitem}
-
+%
 %
 \subsubsection{Georgia Institute of Technology}
 %
@@ -86,8 +92,8 @@
   \begin{myitem}
   \item Co-authored \& refereed a conference paper: ``A Review of Wavelet-Based Algorithms for
     Applications in Reduced Order Modeling of Thermal Management Systems.''
-  \item Presented at the NATO RTO-AVT-178 Specialists' Meeting on System Level Thermal Management
-    for Enhanced Platform Efficiency: Bucharest, Romania.
+  \item Presented at the NATO RTO-AVT-178 Specialists' Meeting on System Level Thermal Management for
+    Enhanced Platform Efficiency: Bucharest, Romania.
   \item Conducted research on advanced strategies for data center cooling simulations
   \end{myitem}
 \end{position}
