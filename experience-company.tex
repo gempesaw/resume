@@ -11,18 +11,40 @@
 
 \section{Experience}
 
-\subsubsection{Sharecare, Inc. Atlanta, GA}
+\subsubsection{Sharecare, Inc.}
 
 \begin{position}
-  \headerrow{QA Architect}{Sharecare, Inc.}{Aug 2012 - Present}
-  \headerrow{Build Manager}{Sharecare, Inc.}{Oct 2011 - Aug 2012}
-  \headerrow{QA Engineer I}{Sharecare, Inc.}{Aug 2011 - Oct 2011}
-%
-  \paragraph{Honeydew} (Perl, PHP/jQuery/DHTMLX, Saucelabs, Selenium Webdriver)
+\begin{tikzpicture}
+%draw horizontal line
+\draw (0,0) -- (2,0);
+\draw[decorate,decoration={snake,pre length=5mm, post length=5mm}] (2,0) -- (4,0);
+\draw (4,0) -- (5,0);
+\draw[decorate,decoration={snake,pre length=5mm, post length=5mm}] (5,0) -- (7,0);
+
+%draw vertical lines
+\foreach \x in {0,1,2,4,5,7}
+\draw (\x cm,3pt) -- (\x cm,-3pt);
+
+%draw nodes
+\draw (0,0) node[below=3pt] {$ 0 $} node[above=3pt] {$   $};
+\draw (1,0) node[below=3pt] {$ 1 $} node[above=3pt] {$ 10 $};
+\draw (2,0) node[below=3pt] {$ 2 $} node[above=3pt] {$ 20 $};
+\draw (3,0) node[below=3pt] {$  $} node[above=3pt] {$  $};
+\draw (4,0) node[below=3pt] {$ 5 $} node[above=3pt] {$ 50 $};
+\draw (5,0) node[below=3pt] {$ 6 $} node[above=3pt] {$ 60 $};
+\draw (6,0) node[below=3pt] {$  $} node[above=3pt] {$  $};
+\draw (7,0) node[below=3pt] {$ n $} node[above=3pt] {$ 10n $};
+\end{tikzpicture}
+
+  %% \headerrow{QA Architect}{Sharecare, Inc.}{Aug 2012 - Present}
+  %% \headerrow{Build Manager}{Sharecare, Inc.}{Oct 2011 - Aug 2012}
+  %% \headerrow{QA Engineer I}{Sharecare, Inc.}{Aug 2011 - Oct 2011}
+
+  \paragraph{Honeydew:} Perl, PHP/jQuery/DHTMLX, Saucelabs, Webdriver
   \begin{myitem}
-  \item Grew our simple in-house Cucumber analog into a full fledged cross-browser automation suite
-  \item Rewrote the backend to update the project from Selenium RC to Selenium Webdriver
-  \item Added a customizable monitoring system to alert when critical production functionality tests failed
+  \item Developed an in-house Cucumber analog, building a full fledged cross-browser automation suite
+  \item Rewrote the backend to update the project from Selenium RC to Webdriver
+  \item Added monitoring system to alert when critical production functionality tests failed
   %% \item Interprets DSL feature files and executes them locally or on Saucelabs' entire browser suite, recording
   %%   the video with subtitles of each step execution
   \item Enhanced front end with autosuggests, instant feature file searching, per-user default
@@ -31,7 +53,7 @@
 %
   %% (setq tex-main-file "c:/daniel/resume/resume.tex")
 %
-  \paragraph{Squash} (Perl, MySQL)
+  \paragraph{Squash:} Perl, MySQL
   \begin{myitem}
   \item Wrote a site crawler checks headers on URLs and all resources embedded from a sitemap
   \item Scanned three production websites, over 1.5 million pages,
@@ -40,29 +62,16 @@
   %%   page over time)
   \end{myitem}
 %
-  \paragraph{REST API} (Perl, PHP/jQuery, MongoDB)
+  \paragraph{REST API:} Perl, PHP/jQuery, MongoDB
   \begin{myitem}
   \item Built a test suite with SPORE to test our internal REST APIs
-  \item Created an UI where anyone could run the tests for their project
+  \item Created a UI where other QA engineers can execute project tests
   \end{myitem}
 %
-  \paragraph{Manual QA Testing} (JIRA)
+  \paragraph{Manual QA Testing:} JIRA
   \begin{myitem}
   \item Routinely performed manual browser tests in all major browsers,
   \item Tested stories and documented bugs in JIRA with extensive screenshot and video evidence
   %% \item Frequently debugged complicated issues alongside developers
-  \end{myitem}
-\end{position}
-
-\subsubsection{Georgia Institute of Technology}
-%
-\begin{position}
-  \headerrow {Graduate Research Assistant}{Georgia Institute of Technology}{2008 - 2011}
-  \begin{myitem}
-  \item Co-authored \& refereed a conference paper: ``A Review of Wavelet-Based Algorithms for
-    Applications in Reduced Order Modeling of Thermal Management Systems.''
-  \item Presented at the NATO RTO-AVT-178 Specialists' Meeting on System Level Thermal Management for
-    Enhanced Platform Efficiency: Bucharest, Romania.
-  %% \item Conducted research on advanced strategies for data center cooling simulations
   \end{myitem}
 \end{position}
