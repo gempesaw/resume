@@ -1,4 +1,9 @@
 \documentclass[10pt]{article}
+\usepackage{hyperref, enumitem, sectsty}
+
+\usepackage{tikz}
+\usetikzlibrary{decorations}
+
 \pagestyle{empty}
 \topmargin -.75in
 \textwidth 6.5in
@@ -8,95 +13,23 @@
 \def\@seccntformat#1{}
 \makeatother
 
+%% set up my own custom itemize
 \newenvironment{myitem}{
-\begin{itemize}
-  \setlength{\itemsep}{1pt}
-  \setlength{\parskip}{0pt}
-  \setlength{\parsep}{0pt}
+  \begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
 }{\end{itemize}}
 
+%% control section headers
+\sectionfont{\raggedright}%% \sectionrule{0ex}{0pt}{-.75ex}{1pt}}
 
 \begin{document}
-\begin{center}
-\Large
-\textbf{Daniel Joseph Gempesaw}
-\end{center}
-\hrule
-\vspace{0.2 cm}
-\normalsize
-360 Pharr Rd NE Apt. 606 \hfill gempesaw@gmail.com\\
-Atlanta, GA 30305 \hfill (302) 754-1231\\
-\vspace{-.60 cm}
-
-\vspace{-0.45 cm}
-\section{Experience}
-\vspace{-0.25cm}
-
-\begin{myitem}
-  \item QA Architect at Sharecare, Inc. - \hfill Aug 2012 - Present
-  \begin{myitem}
-    \item Created test framework for in-house REST API testing (Perl)
-    \item Created a customizable website-functionality monitoring suite (Perl, PHP)
-  \end{myitem}
-
-  \item Build Manager at Sharecare, Inc. - \hfill Oct 2011 - Aug 2012
-  \begin{myitem}
-    \item Wrote a custom site crawler with daily email reports on resources (Perl)
-    \begin{myitem}
-      \item Crawled 1.5 million pages nightly, checking all referenced resources
-      \item Aggregated email reports of status codes for urls, images, files
-      \item Data is persisted in a MySQL DB and additional reporting available - status codes of a page over time, average load time for a resource
-    \end{myitem}
-    \item Rewrite browser automation suite to use Selenium Webdriver 2.0 using Selenium::Remote::Driver
-    \begin{myitem}
-      \item Complete overhaul of the tool, refactored most methods and read all of them
-      \item
-    \end{item}
-    \item Responsible for interactions between related projects across new builds
-  \end{myitem}
-
-  \item QA Engineer I at Sharecare, Inc. - \hfill Aug 2011 - Oct 2011
-  \begin{myitem}
-    \item Development of in-house browser automation tool using Selenium RC 1.0
-    \item Manual QA Testing of multiple websites/browsers
-  \end{myitem}
-
-  \item Gempesaw, Daniel and Yogendra Joshi. ``A Review of Wavelet-Based Algorithms for\hfill Oct 2010\\
-Applications in Reduced Order Modeling of Thermal Management Systems.''
-  \begin{myitem}
-    \item Refereed Conference Paper presented at NATO RTO-AVT-178 Specialists' Meeting on System Level Thermal Management for Enhanced Platform Efficiency: Bucharest, Romania.
-  \end{myitem}
-\end{myitem}
-
-\vspace{-.55cm}
-\section{Skills}
-\vspace{-0.25cm}
-\begin{myitem}
-\item I write, read, and/or use the following frequently: Perl, PHP, elisp, bash, Emacs.
-\item On a less freqeunt basis, I write and read: \LaTeX, JavaScript, AJAX, HTML5, CSS, MySQL queries.
-\item Read only languages and those in which I haven't recently authored: C, C++, Java/JSP/JSTL, Matlab, Maple, Microsoft Office Suite.
-\item Typing Speed: 120 WPM
-\item Limited comprehension of Spanish and Mandarin
-\item Hobbies: Ultimate Frisbee, Bass guitar
-\end{myitem}
-
-\section{Education}
-\vspace{-0.25cm}
-\begin{myitem}
-  \item Georgia Institute of Technology, Atlanta, GA \hfill (2008 - 2011)
-  \begin{myitem}
-    \item M. S. in Mechanical Engineering ``Advanced Simulation Strategies for Data Center Cooling''
-  \end{myitem}
-  \item University of Delaware, Newark, DE \hfill (2004 - 2008)
-  \begin{myitem}
-    \item Honors Bachelor of Mechanical Engineering, B. S. in Mathematics, Minor in Phyiscs
-%    \item Research with Dr. Kausik Sarkar: Drops in Shear Flow \hfill Spring 2007
-%    \item Research with Dr. Russell Luke: The Phase Retrieval Problem\hfill Summer 2005
-  \end{myitem}
-\end{myitem}
-%
+\input{header.tex}
+\vspace{0.125cm}
+\input{experience-company.tex}
+\input{skills.tex}
+\input{education.tex}
 \vfill
 \hrule
-% \raggedleft
-% \vspace{.2 cm}
 \end{document}
