@@ -1,20 +1,15 @@
 % set the page title at the top
-\newcommand{\myauthor}[1] {
+\newcommand{\myauthor}[2] {
   \begin{center}
     \Large
     \textbf{#1}
+    \normalsize
+    \\*#2
+    \vspace{0.125cm}
+    \hrule
+    \vspace{-0.625cm}
   \end{center}
-  \normalsize}
-%
-% set up the contact information
-\newcommand{\contact}[4] {
-  #1 \hfill \href{mailto:#3}{#3}\\
-  #2 \hfill #4\\
-  \hrule
 }
 %
 \myauthor{Daniel Joseph Gempesaw}
-\contact{16 Edwards St, Apt 1}
-        {New Haven, CT 06511}
-        {gempesaw@gmail.com}
-        {(302) 754-1231}
+         {gempesaw@gmail.com}
